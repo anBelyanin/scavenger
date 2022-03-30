@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label for="login"><b>Username</b></label>
+    <input id="login" type="text" placeholder="Enter Username" name="login" required>
+
+    <label for="password"><b>Password</b></label>
+    <input id="password" type="password" placeholder="Enter Password" name="password" required>
+
+
+<button onclick="sendCredentials(document.getElementById('login').innerHTML, document.getElementById('password').innerHTML)">
+        Send
+    </button>
+
+    <script>
+        function sendCredentials(login, password) {
+            var url = "http://localhost:8080/scavenger/authProcess";
+            requestBuilder = new XMLHttpRequest();
+            requestBuilder.open("GET", url);
+            // requestBuilder.setRequestHeader("Accept", "application/json");
+            // requestBuilder.setRequestHeader("Content-Type", "application/json");
+            // var data = `
+            // "login":` + login +
+            //     `"password":` + password
+            // requestBuilder.send(data)
+            requestBuilder.send(url);
+        }
+    </script>
+</body>
+</html>
