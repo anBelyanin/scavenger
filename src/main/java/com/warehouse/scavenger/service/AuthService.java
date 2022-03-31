@@ -1,6 +1,7 @@
 package com.warehouse.scavenger.service;
 
 import org.apache.commons.codec.digest.DigestUtils;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;

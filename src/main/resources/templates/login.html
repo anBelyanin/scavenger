@@ -5,14 +5,16 @@
     <title>Title</title>
 </head>
 <body>
-    <label for="login"><b>Username</b></label>
-    <input id="login" type="text" placeholder="Enter Username" name="login" required>
+    <form name="credentials" action="" method="post">
+        <label for="login"><b>Username</b></label>
+        <input id="login" type="text" placeholder="Enter Username" name="login" required>
 
-    <label for="password"><b>Password</b></label>
-    <input id="password" type="password" placeholder="Enter Password" name="password" required>
+        <label for="password"><b>Password</b></label>
+        <input id="password" type="password" placeholder="Enter Password" name="password" required>
+    </form>
 
 
-<button onclick="sendCredentials(document.getElementById('login').innerHTML, document.getElementById('password').innerHTML)">
+<button onclick="sendCredentials(document.getElementById('login').value, document.getElementById('password').value)">
         Send
     </button>
 
@@ -23,10 +25,11 @@
             requestBuilder.open("POST", url);
             requestBuilder.setRequestHeader("Accept", "application/json");
             requestBuilder.setRequestHeader("Content-Type", "application/json");
-            var data =
-            `"login":` + login + `"\n"`
-            `"password":` + password
-            requestBuilder.send(data);
+            let json = JSON.stringify({
+                login: login,
+                password: password
+            });
+            requestBuilder.send(json);
         }
     </script>
 </body>
