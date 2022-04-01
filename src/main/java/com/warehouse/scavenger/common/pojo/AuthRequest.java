@@ -1,8 +1,6 @@
-package com.warehouse.scavenger.pojo;
+package com.warehouse.scavenger.common.pojo;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.*;
 
 @JsonPropertyOrder({
     "login",
@@ -12,10 +10,10 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 public class AuthRequest {
 
     @JsonProperty(value = "login")
-    public String login;
+    private String login;
 
     @JsonProperty(value = "password")
-    public String password;
+    private String password;
 
     public String getLogin() {
         return login;

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Authorization</title>
 </head>
 <body>
     <form name="credentials" action="" method="post">
@@ -25,11 +25,11 @@
             requestBuilder.open("POST", url);
             requestBuilder.setRequestHeader("Accept", "application/json");
             requestBuilder.setRequestHeader("Content-Type", "application/json");
-            let json = JSON.stringify({
+            const body = JSON.stringify({
                 login: login,
                 password: password
             });
-            requestBuilder.send(json);
+            requestBuilder.send(body);
         }
     </script>
 </body>
