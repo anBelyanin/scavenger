@@ -1,8 +1,7 @@
-package com.warehouse.scavenger.service;
+package com.warehouse.scavenger.service.auth;
 
 import com.warehouse.scavenger.common.Constants;
 import org.apache.commons.codec.digest.DigestUtils;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;

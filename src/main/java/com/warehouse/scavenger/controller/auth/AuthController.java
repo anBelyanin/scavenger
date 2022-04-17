@@ -1,7 +1,7 @@
-package com.warehouse.scavenger.controller;
+package com.warehouse.scavenger.controller.auth;
 
 import com.warehouse.scavenger.common.pojo.AuthRequest;
-import com.warehouse.scavenger.service.AuthService;
+import com.warehouse.scavenger.service.auth.AuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
