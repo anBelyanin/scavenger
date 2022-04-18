@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import java.util.HashMap;
 import java.util.Map;
 
+//TODO переписать класс для работы с БД после ее внедрения
 @Service
 public class AuthService {
 
